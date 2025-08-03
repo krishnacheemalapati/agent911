@@ -2,7 +2,9 @@ from django.db import models
 
 class Call(models.Model):
     start_time = models.DateTimeField(auto_now_add=True)
+    end_time = models.DateTimeField(blank=True, null=True)
     caller_info = models.CharField(max_length=255, blank=True, null=True)
+    report = models.TextField(blank=True, null=True)
 
 class CallTranscript(models.Model):
     call = models.ForeignKey(Call, on_delete=models.CASCADE, related_name='transcripts')

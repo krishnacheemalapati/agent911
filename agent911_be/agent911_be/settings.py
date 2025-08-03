@@ -137,3 +137,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CARTESIA_API_KEY = config('CARTESIA_API_KEY')
+GEMINI_API_KEY = config('GEMINI_API_KEY')
